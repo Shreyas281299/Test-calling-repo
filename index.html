@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>Webex Meetings Quick Start</title>
+  </head>
+  <script>
+    const Webex = require("webex");
+    const Calling = require("webex/calling");
+    // const { Calling } = require("webex");
+
+    let callingClient;
+    let line;
+    // let webex;
+    let calling;
+
+    console.log("Shreyas", Webex);
+    console.log("Shreyas 2", Calling);
+
+    const webexConfig = {
+      config: {
+        logger: {
+          level: "debug", // set the desired log level
+        },
+        meetings: {
+          reconnection: {
+            enabled: true,
+          },
+          enableRtx: true,
+        },
+        encryption: {
+          kmsInitialTimeout: 8000,
+          kmsMaxTimeout: 40000,
+          batcherMaxCalls: 30,
+          caroots: null,
+        },
+        dss: {},
+      },
+      credentials: {
+        access_token:
+          "NTNkYjQ3OTktMWZlMi00NGMxLWI5MTYtMjQ4MmYzNDU5NTkyMjk3ZjdjNjQtNTQ3_A52D_1704d30d-a131-4bc7-9449-948487643793",
+      },
+    };
+
+    // Set calling configuration
+
+    const callingConfig = {
+      clientConfig: {
+        calling: true,
+        contact: true,
+        callHistory: true,
+        callSettings: true,
+        voicemail: true,
+      },
+      callingClientConfig: {
+        logger: {
+          level: "info",
+        },
+      },
+      logger: {
+        level: "info",
+      },
+    };
+    console.log(webex);
+    calling = Calling.init({ webexConfig, callingConfig });
+    calling.on("ready", () => {
+      calling.register().then(() => {
+        callingClient = calling.callingClient;
+        // console.log("Shreyas calling registered");
+      });
+    });
+  </script>
+  <body>
+    <h1>Meetings Quick Start</h1>
+    <p>
+      This sample demonstrates how to start a meeting using Webex JS-SDK in the
+      browser.
+    </p>
+    <button id="hangup" title="register" type="button" onclick="webexInit()">
+      webexInit
+    </button>
+    <button id="hangup" title="register" type="button" onclick="initCalling()">
+      initCalling
+    </button>
+    <button id="hangup" title="register" type="button" onclick="register()">
+      register
+    </button>
+    <!-- <script src="./src/index.js"></script> -->
+    <script src="dist/main.js"></script>
+  </body>
+</html>
