@@ -8,7 +8,7 @@ module.exports = {
   entry: "./src/index.js", // Specify the entry point
   output: {
     filename: "main.js", // Specify the output bundle filename
-    path: path.resolve(__dirname, "dist"), // Specify the output directory
+    path: path.resolve(__dirname, "./src/dist"), // Specify the output directory
   },
   resolve: {
     fallback: {
