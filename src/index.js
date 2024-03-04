@@ -1,4 +1,4 @@
-import Calling from "webex/calling";
+import { createClient } from "@webex/calling";
 
 let callingClient;
 let line;
@@ -23,7 +23,8 @@ const webexConfig = {
     dss: {},
   },
   credentials: {
-    access_token: "access_token",
+    access_token:
+      "MTYzYWRmNDMtOGMwZC00MWYwLTg3ZmMtNTMzY2FkNTVhZTA5YTNmNTZjMGMtNTEw_P0A1_b657fcf3-6b06-46a4-ab0e-f23fceb7a447",
   },
 };
 
@@ -47,7 +48,7 @@ const callingConfig = {
 };
 
 async function callingInit() {
-  calling = await Calling.init({
+  calling = await createClient({
     webexConfig,
     callingConfig,
   });
