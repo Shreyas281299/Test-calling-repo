@@ -24,7 +24,7 @@ const webexConfig = {
   },
   credentials: {
     access_token:
-      "MTYzYWRmNDMtOGMwZC00MWYwLTg3ZmMtNTMzY2FkNTVhZTA5YTNmNTZjMGMtNTEw_P0A1_b657fcf3-6b06-46a4-ab0e-f23fceb7a447",
+      "access_token",
   },
 };
 
