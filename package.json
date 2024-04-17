@@ -16,7 +16,7 @@
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
     "url": "^0.11.3",
-    "webex": "2.59.8-next.10"
+    "webex": "3.0.0-next.9"
   },
   "devDependencies": {
     "webpack": "^5.88.2",

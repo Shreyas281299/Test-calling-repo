@@ -1,4 +1,4 @@
-import { createClient } from "@webex/calling";
+import Calling from "webex/calling";
 
 let callingClient;
 let line;
@@ -48,11 +48,12 @@ const callingConfig = {
 };
 
 async function callingInit() {
-  calling = await createClient({
+  calling = await Calling.init({
     webexConfig,
     callingConfig,
   });
   calling.on("ready", () => {
+    console.log(calling);
     calling.register().then(() => {
       callingClient = calling.callingClient;
     });
