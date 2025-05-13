@@ -16,7 +16,7 @@
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
     "url": "^0.11.3",
-    "webex": "3.0.0-next.9"
+    "webex": "3.8.0-next.21"
   },
   "devDependencies": {
     "webpack": "^5.88.2",
@@ -25,5 +25,6 @@
   "scripts": {
     "start": "http-server ./src -p 1234",
     "build": "webpack"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
