@@ -23,7 +23,8 @@ const webexConfig = {
     dss: {},
   },
   credentials: {
-    access_token: "ACCESS_TOKEN",
+    access_token:
+      "access_token",
   },
 };
 
